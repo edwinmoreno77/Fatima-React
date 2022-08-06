@@ -54,3 +54,21 @@ code {
 
 
 }
+
+
+
+/* card */
+.imgCard:hover {
+  filter: drop-shadow(0 0 0.6em #5a5959aa);
+}
+
+.imgCard img {
+  transform: scale(1);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.imgCard :hover img {
+  transform: scale(1.025);
+  filter: drop-shadow(0 0 0.6em #5a5959aa);
+}

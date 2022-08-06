@@ -1,11 +1,14 @@
 import React from 'react';
+import { CakeList } from '../components/CakeList';
 
 export const ChocolatePage = () => {
     return (
         <>
-            <div>
-                <h1>ChocolatePage</h1>
+            <div className="m-3">
+                <CakeList category={'chocolate'} />
             </div>
+
         </>
+
     )
 }

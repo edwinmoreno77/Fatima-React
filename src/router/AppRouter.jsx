@@ -1,12 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
-// import { HeroesRoutes } from "../heroes";//CakeRoutes
 import { LoginPage } from "../auth/pages/LoginPage";
+import { ChocolatePage, VanillaPage } from "../cakes";
+import { Footer, Header, Navbar, Slider } from "../ui";
+
+// import { HeroesRoutes } from "../heroes";//CakeRoutes
 // import { PrivateRoute } from "./PrivateRoute";
 // import { PublicRoute } from "./PublicRoute";
-import { ChocolatePage } from "../cakes/pages/ChocolatePage";
-import { VanillaPage } from "../cakes/pages/VanillaPage";
-import { Footer, Header, Navbar, Slider } from "../ui";
 
 export const AppRouter = () => {
     return (

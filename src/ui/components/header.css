@@ -8,7 +8,7 @@
 /* } */
 
 .bg-navbarE {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(32, 36, 40);
     padding: 0.5em 0;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .nav-linkE:hover {
-    background-color: black;
+    background-color: rgb(29, 31, 37);
     color: white;
     border-radius: 0.5em;
     padding: 0.5em;
