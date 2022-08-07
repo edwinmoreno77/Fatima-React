@@ -8,13 +8,13 @@ export const Header = () => {
             <div className="containerE">
                 <div className="navbarE">
                     <a href="" className="navbar-brandE">
-                        <img src="assets/logo-letra.png" alt="" className="card-imgE" />
+                        <img src="../assets/logo-letra.png" alt="" className="card-imgE" />
                     </a>
                     <nav className="navbar-navE">
-                        <a href="#" className="nav-linkE"><i>Basicas</i></a>
-                        <a href="#" className="nav-linkE"><i>Personalizadas</i></a>
-                        <a href="#" className="nav-linkE"><i>Vanilla</i></a>
-                        <a href="#" className="nav-linkE"><i>Marmoleada</i></a>
+                        <a href="/masVendido" className="nav-linkE"><i>Especiales</i></a>
+                        <a href="/allcakes" className="nav-linkE"><i>Ganache</i></a>
+                        <a href="/allcakes" className="nav-linkE"><i>Buttercream</i></a>
+                        <a href="/allcakes" className="nav-linkE"><i>Nudes</i></a>
                     </nav>
                 </div>
             </div>

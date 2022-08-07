@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 
 export const CakeCard = ({ id, category, price }) => {
 
-    const heroImageUrl = `./assets/${id}.png`;
+    const cakeImageUrl = `./assets/${id}.png`;
     return (
         <div className='imgCard col animate__animated animate__fadeIn'>
             <div className='card shadow mb-2'>
                 <div className='row no-gutters'>
                     <Link
                         className='col-12 text-decoration-none'
-                        to={`/hero/${id}`}>
-                        <img src={heroImageUrl} className='card-img img shadow' alt={id} />
+                        to={`/cake/${id}`}>
+                        <img src={cakeImageUrl} className='card-img img-thumbnail shadow' alt={id} />
                     </Link>
                     <div className='col-12 col-hero'>
                         <div className='card-body'>
@@ -22,8 +22,8 @@ export const CakeCard = ({ id, category, price }) => {
                             </p> */}
                             <Link
                                 className='text-decoration-none btn btn-primary shadow'
-                                to={`/hero/${id}`}>
-                                Info...
+                                to={`/cake/${id}`}>
+                                Agendar
                             </Link>
                         </div>
                     </div>
