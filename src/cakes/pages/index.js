@@ -1,7 +1,9 @@
 
 
 
-export * from './ChocolatePage';
-export * from './VanillaPage';
+export * from './ButterCreamPage';
+export * from './GanachePage';
 export * from './AllCakesPages';
-export * from './BestSellerPage';
+export * from './HomePage';
+export * from './CakePage';
+export * from './SearchPage';

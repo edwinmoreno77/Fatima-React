@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { Header } from "../../ui";
-// import { get } from "../helpers";
 import { getCakeById } from '../helpers/getCakeById';
 
 

@@ -51,6 +51,28 @@ code {
 /* carousel */
 
 
+
+/* IMAGENES DE HOMEPAGE */
+
+.img-servicios img {
+  width: 70%;
+  margin-left: 6rem;
+  transform: scale(1);
+  transition: 1.5s ease-in-out;
+}
+
+.img-servicios:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 0.6em #cd940faa);
+
+}
+
+
+/* IMAGENES DE HOMEPAGE */
+
+
+
+
 /* card */
 .imgCard:hover {
   filter: drop-shadow(0 0 0.6em #5a5959aa);
@@ -135,8 +157,6 @@ code {
 .img-footer:hover img {
   transform: scale(1.15);
   filter: drop-shadow(0 0 0.6em #cd940faa);
-
-
 }
 
 /* footer */

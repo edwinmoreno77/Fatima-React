@@ -3,80 +3,93 @@ export const cakes = [
         'id': 'cake-1',
         'category': 'chocolate',
         'price': '$35.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'Chocofresas Cake',
 
     },
     {
         'id': 'cake-2',
-        'category': 'vanilla',
+        'category': 'buttercream',
         'price': '$25.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'halloween Cake',
     },
     {
         'id': 'cake-3',
-        'category': 'chocolate',
+        'category': 'buttercream',
         'price': '$45.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'flores Cake',
     },
     {
         'id': 'cake-4',
-        'category': 'vanilla',
+        'category': 'buttercream',
         'price': '$35.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'manjar Cake',
     },
     {
         'id': 'cake-5',
-        'category': 'chocolate',
+        'category': 'buttercream',
         'price': '$25.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'bestido Cake',
     },
     {
         'id': 'cake-6',
-        'category': 'vanilla',
+        'category': 'chocolate',
         'price': '$45.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'lemmings Cake',
     },
     {
         'id': 'cake-7',
-        'category': 'chocolate',
+        'category': 'buttercream',
         'price': '$35.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'futbol Cake',
     },
     {
         'id': 'cake-8',
-        'category': 'vanilla',
+        'category': 'buttercream',
         'price': '$25.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'navidad Cake'
     },
     {
         'id': 'cake-9',
-        'category': 'chocolate',
+        'category': 'buttercream',
         'price': '$45.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'dulces Cake',
     },
     {
         'id': 'cake-10',
-        'category': 'vanilla',
+        'category': 'chocolate',
         'price': '$35.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'mym Cake',
     },
 
     {
         'id': 'cake-11',
         'category': 'chocolate',
         'price': '$25.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'mym Cake',
     },
     {
         'id': 'cake-12',
-        'category': 'vanilla',
+        'category': 'buttercream',
         'price': '$45.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'unicornio Cake',
     },
     {
         'id': 'cake-13',
-        'category': 'chocolate',
+        'category': 'buttercream',
         'price': '$35.000',
-        'productName': 'cake'
+        'productName': 'cake',
+        'name': 'goku Cake',
     }
 ]

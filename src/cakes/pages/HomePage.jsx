@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
 
 
 
 
-export const BestSellerPage = () => {
+export const HomePage = () => {
 
     return (
         <>
@@ -25,11 +26,11 @@ export const BestSellerPage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <button className="btn btn-outline-light mb-5 mb-lg-0"><i
-                                className="bi bi-calendar-event"></i><i>Agendar</i></button>
+                            <Link to={`/cake/cake-1`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                                className="bi bi-calendar-event"></i><i>Agendar</i></Link>
 
                         </div>
-                        <div className="col-12 col-lg-8 img-servicios-1 d-flex justify-content-center my-5">
+                        <div className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
                             <img src="assets/cake-1.png" alt="" className="img-fluid" />
                         </div>
 
@@ -41,10 +42,10 @@ export const BestSellerPage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <button className="btn btn-outline-light mb-5 mb-lg-0"><i
-                                className="bi bi-calendar-event"></i><i>Agendar</i></button>
+                            <Link to={`/cake/cake-10`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                                className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
-                        <div className="col-12 col-lg-7 img-servicios-2 d-flex justify-content-center my-5">
+                        <div className="col-12 col-lg-7 img-servicios d-flex justify-content-center my-5">
                             <img src="assets/cake-10.png" alt="" className="img-fluid" />
                         </div>
                     </div>
@@ -55,10 +56,10 @@ export const BestSellerPage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <button className="btn btn-outline-light mb-5 mb-lg-0"><i
-                                className="bi bi-calendar-event"></i><i>Agendar</i></button>
+                            <Link to={`/cake/cake-9`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                                className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
-                        <div className="col-12 col-lg-8 img-servicios-3 d-flex justify-content-center my-5">
+                        <div className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
                             <img src="assets/cake-9.png" alt="" className="img-fluid" />
                         </div>
                     </div>

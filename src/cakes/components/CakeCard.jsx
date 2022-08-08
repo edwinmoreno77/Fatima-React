@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export const CakeCard = ({ id, category, price }) => {
+export const CakeCard = ({ id, category, price, name }) => {
 
     const cakeImageUrl = `./assets/${id}.png`;
     return (
@@ -14,7 +14,7 @@ export const CakeCard = ({ id, category, price }) => {
                     </Link>
                     <div className='col-12 col-hero'>
                         <div className='card-body'>
-                            <h5 className='card-title'>{id}</h5>
+                            <h5 className='card-title'>{name}</h5>
                             <p className='card-text'>{price}</p>
                             {/* {(alter_ego !== characters) && (<p >{characters}</p>)} */}
                             {/* <p className="card-text">
