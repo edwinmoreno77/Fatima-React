@@ -71,13 +71,13 @@ export const cakes = [
         'name': 'MyM',
     },
 
-    {
-        'id': 'cake-11',
-        'category': 'chocolate',
-        'price': '$25.000',
-        'productName': 'cake',
-        'name': 'MyM',
-    },
+    // {
+    //     'id': 'cake-11',
+    //     'category': 'chocolate',
+    //     'price': '$25.000',
+    //     'productName': 'cake',
+    //     'name': 'MyM',
+    // },
     {
         'id': 'cake-12',
         'category': 'buttercream',

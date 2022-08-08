@@ -16,14 +16,10 @@ export const CakeCard = ({ id, category, price, name }) => {
                         <div className='card-body'>
                             <h5 className='card-title'>{name}</h5>
                             <p className='card-text'>{price}</p>
-                            {/* {(alter_ego !== characters) && (<p >{characters}</p>)} */}
-                            {/* <p className="card-text">
-                                <small className='text-muted'>{first_appearance}</small>
-                            </p> */}
                             <Link
                                 className='text-decoration-none btn btn-primary shadow'
                                 to={`/cake/${id}`}>
-                                Agendar
+                                Mirar
                             </Link>
                         </div>
                     </div>

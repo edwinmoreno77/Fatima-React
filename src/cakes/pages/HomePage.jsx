@@ -56,11 +56,11 @@ export const HomePage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <Link to={`/cake/cake-9`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                            <Link to={`/cake/cake-6`} className="btn btn-outline-light mb-5 mb-lg-0"><i
                                 className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
                         <div className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
-                            <img src="assets/cake-9.png" alt="" className="img-fluid" />
+                            <img src="assets/cake-6.png" alt="" className="img-fluid" />
                         </div>
                     </div>
                 </div>
