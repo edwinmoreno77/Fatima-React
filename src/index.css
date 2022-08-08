@@ -53,20 +53,21 @@ code {
 
 
 /* IMAGENES DE HOMEPAGE */
+@media(min-width: 1200px) {
 
-.img-servicios img {
-  width: 70%;
-  margin-left: 6rem;
-  transform: scale(1);
-  transition: 1.5s ease-in-out;
+  .img-servicios img {
+    width: 80%;
+    margin-left: 6rem;
+    transform: scale(1);
+    transition: 1s ease-in-out;
+  }
+
+  .img-servicios:hover img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 1.5em #cd940faa);
+
+  }
 }
-
-.img-servicios:hover img {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 0.6em #cd940faa);
-
-}
-
 
 /* IMAGENES DE HOMEPAGE */
 
@@ -80,12 +81,12 @@ code {
 
 .imgCard img {
   transform: scale(1);
-  transition: 0.2s ease-in-out;
+  transition: 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .imgCard :hover img {
-  transform: scale(1.15);
+  /* transform: scale(1.1); */
   filter: drop-shadow(0 0 0.6em #5a5959aa);
 }
 

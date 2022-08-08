@@ -38,15 +38,15 @@ export const CakePage = () => {
                     />
                 </div>
                 <div className="col-7">
-                    <h3>{cake.id}</h3>
+                    <h3>{cake.name}</h3>
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item"><b>Alter_ego: </b>{cake.id}</li>
-                        <li className="list-group-item"><b>Publisher: </b>{cake.id}</li>
-                        <li className="list-group-item"><b>First appearance: </b>{cake.id}</li>
+                        <li className="list-group-item"><b>Precio: </b>{cake.price}</li>
+                        <li className="list-group-item"><b>Biscocho: </b>{cake.name}</li>
+                        <li className="list-group-item"><b>Relleno: </b>{cake.name}</li>
                     </ul>
 
-                    <h5 className="mt-3">Characters</h5>
-                    <p>{cake.id}</p>
+                    <h5 className="mt-3">Descripción</h5>
+                    <p>{cake.name}</p>
 
                     <button
                         onClick={onNavigateBack}

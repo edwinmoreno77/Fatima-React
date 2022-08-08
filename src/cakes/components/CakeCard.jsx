@@ -10,7 +10,7 @@ export const CakeCard = ({ id, category, price, name }) => {
                     <Link
                         className='col-12 text-decoration-none'
                         to={`/cake/${id}`}>
-                        <img src={cakeImageUrl} className='card-img img-thumbnail shadow' alt={id} />
+                        <img src={cakeImageUrl} className='card-img shadow' alt={id} />
                     </Link>
                     <div className='col-12 col-hero'>
                         <div className='card-body'>
