@@ -29,15 +29,15 @@ export const CakePage = () => {
     return (
         <>
             <Header />
-            <div className="row mt-5">
-                <div className="col-5">
+            <div className="row mt-5 justify-content-center">
+                <div className="col-12 col-md-6 p-4 imgCard">
                     <img
                         src={cakeImageUrl}
                         alt={cake.id}
                         className="img-thumbnail animate__animated animate__fadeInLeft shadow"
                     />
                 </div>
-                <div className="col-7">
+                <div className="col-12 col-md-5 ps-4 pt-4">
                     <h3>{cake.name}</h3>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item"><b>Precio: </b>{cake.price}</li>
