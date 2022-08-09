@@ -31,7 +31,7 @@ export const HomePage = () => {
 
                         </div>
                         <div className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
-                            <img src="assets/cake-1.png" alt="" className="img-fluid" />
+                            <img src="/assets/cake-1.png" alt="" className="img-fluid" />
                         </div>
 
                     </div>
@@ -46,7 +46,7 @@ export const HomePage = () => {
                                 className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
                         <div className="col-12 col-lg-7 img-servicios d-flex justify-content-center my-5">
-                            <img src="assets/cake-10.png" alt="" className="img-fluid" />
+                            <img src="/assets/cake-10.png" alt="" className="img-fluid" />
                         </div>
                     </div>
 
@@ -60,7 +60,7 @@ export const HomePage = () => {
                                 className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
                         <div className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
-                            <img src="assets/cake-6.png" alt="" className="img-fluid" />
+                            <img src="/assets/cake-6.png" alt="" className="img-fluid" />
                         </div>
                     </div>
                 </div>
