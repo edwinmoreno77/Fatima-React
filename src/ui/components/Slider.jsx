@@ -20,7 +20,7 @@ export const Slider = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="d-flex justify-content-center img-carousel">
-                            <img src="assets/cake-1.png" className="d-block" alt="..." />
+                            <img src="/assets/cake-1.png" className="d-block" alt="..." />
                         </div>
                         <div className="carousel-caption d-none d-md-block text-dark">
 
@@ -28,7 +28,7 @@ export const Slider = () => {
                     </div>
                     <div className="carousel-item">
                         <div className="d-flex justify-content-center img-carousel">
-                            <img src="assets/cake-6.png" className="d-block" alt="..." />
+                            <img src="/assets/cake-6.png" className="d-block" alt="..." />
                         </div>
                         <div className="carousel-caption d-none d-md-block text-dark">
 
@@ -36,7 +36,7 @@ export const Slider = () => {
                     </div>
                     <div className="carousel-item">
                         <div className="d-flex justify-content-center img-carousel">
-                            <img src="assets/cake-2.png" className="d-block" alt="..." />
+                            <img src="/assets/cake-2.png" className="d-block" alt="..." />
                         </div>
                         <div className="carousel-caption d-none d-md-block text-dark">
 
