@@ -10,7 +10,7 @@ export const Footer = () => {
                         con las más novedosas tecnicas de resposteria.</i></p>
                 </div>
                 <div className="text-center d-flex justify-content-center img-footer icon">
-                    <a href="https://www.instagram.com/fatima.afta/?hl=es"><img src="assets/logo.png"
+                    <a href="https://www.instagram.com/fatima.afta/?hl=es"><img src="/assets/logo.png"
                         alt="" /></a>
                 </div>
                 <div className="text-center py-2">
