@@ -36,9 +36,9 @@ export const SearchPage = () => {
     return (
         <>
             <SubNavBar />
-            <div className="row searchImgBg">
+            <div className="row container-fluid">
 
-                <div className="col-8 m-5">
+                <div className="col-9 col-md-5 m-5">
                     <h4>Buscador</h4>
                     <form onSubmit={onSearchSubmit}>
                         <input
@@ -51,7 +51,7 @@ export const SearchPage = () => {
                             onChange={onInputChange}
                         />
 
-                        <button className="btn btn-warning mt-2 shadow">
+                        <button className="btn btn-warning mt-5 shadow">
                             Buscar
                         </button>
                     </form>
@@ -59,13 +59,7 @@ export const SearchPage = () => {
                 </div>
 
                 <div className="container">
-                    <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-2 m-5 p-5">
-                        {/* {
-                        (q === '')
-                            ? <div className="alert alert-warning">Search a hero</div>
-                            : (heroes.length === 0)
-                            && <div className="alert alert-danger">No hero with <b>{q}</b></div>
-                    } */}
+                    <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-3 m-2 p-5">
                         <div className=" mt-5 alert alert-primary animate__animated animate__fadeIn"
                             style={{ display: showSearch ? '' : 'none' }}>
                             Buscar una cake
