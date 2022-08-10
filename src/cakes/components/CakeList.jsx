@@ -9,7 +9,7 @@ export const CakeList = ({ productName }) => {
     const cakes = useMemo(() => getProductByName(productName), [productName]);
 
     return (
-        <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-5 col-hero'>
+        <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4'>
             {cakes.map(cake => {
                 return (
                     <CakeCard

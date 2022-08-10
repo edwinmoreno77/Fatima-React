@@ -4,7 +4,7 @@ import queryString from "query-string";
 import { useForm } from "../../hooks/useForm"
 import { CakeCard } from "../components/CakeCard";
 import { getCakeByName } from "../helpers/getCakeByName";
-import { Header } from "../../ui";
+import { SubNavBar } from "../../ui";
 
 
 
@@ -35,7 +35,7 @@ export const SearchPage = () => {
 
     return (
         <>
-            <Header />
+            <SubNavBar />
             <div className="row searchImgBg">
 
                 <div className="col-8 m-5">
@@ -51,7 +51,7 @@ export const SearchPage = () => {
                             onChange={onInputChange}
                         />
 
-                        <button className="btn btn-outline-primary mt-2 shadow">
+                        <button className="btn btn-warning mt-2 shadow">
                             Buscar
                         </button>
                     </form>

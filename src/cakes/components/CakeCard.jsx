@@ -4,7 +4,7 @@ export const CakeCard = ({ id, category, price, name }) => {
 
     const cakeImageUrl = `./assets/${id}.png`;
     return (
-        <div className='imgCard col animate__animated animate__fadeIn'>
+        <div className='imgCard animate__animated animate__fadeIn'>
             <div className='card shadow mb-2'>
                 <div className='row no-gutters'>
                     <Link
@@ -17,9 +17,9 @@ export const CakeCard = ({ id, category, price, name }) => {
                             <h5 className='card-title'>{name}</h5>
                             <p className='card-text'>{price}</p>
                             <Link
-                                className='text-decoration-none btn btn-primary shadow'
+                                className='text-decoration-none btn btn-warning shadow'
                                 to={`/cake/${id}`}>
-                                Mirar
+                                Ver Producto
                             </Link>
                         </div>
                     </div>

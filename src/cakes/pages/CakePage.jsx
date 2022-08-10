@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { Header } from "../../ui";
+import { SubNavBar } from "../../ui";
 import { getCakeById } from '../helpers/getCakeById';
 
 
@@ -16,8 +16,6 @@ export const CakePage = () => {
 
     const onNavigateBack = () => {
         navigate(-1);
-        //otra forma de hacerlo
-        // window.history.back();
     }
 
     if (!cake) {
@@ -28,16 +26,16 @@ export const CakePage = () => {
 
     return (
         <>
-            <Header />
-            <div className="row mt-5 justify-content-center">
-                <div className="col-12 col-md-6 p-4 imgCard">
+            <SubNavBar />
+            <div className="row mt-4 justify-content-center">
+                <div className="col-10 col-md-6 py-3 my-2 imgCardPage">
                     <img
                         src={cakeImageUrl}
                         alt={cake.id}
                         className="img-thumbnail animate__animated animate__fadeInLeft shadow"
                     />
                 </div>
-                <div className="col-12 col-md-5 ps-4 pt-4">
+                <div className="col-10 col-md-5 py-3 my-2 ">
                     <h3>{cake.name}</h3>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item"><b>Precio: </b>{cake.price}</li>
@@ -50,8 +48,8 @@ export const CakePage = () => {
 
                     <button
                         onClick={onNavigateBack}
-                        className="btn btn-outline-primary shadow mb-5">
-                        Return
+                        className="btn btn-warning shadow mb-5">
+                        Regresar
                     </button>
 
                 </div>
