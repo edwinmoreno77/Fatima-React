@@ -30,7 +30,7 @@ export const Slider = () => {
                     </div>
                     <div className="carousel-item">
                         <div className="d-flex justify-content-center img-carousel">
-                            <img src="/assets/cake-2.png" className="d-block" alt="..." />
+                            <img src="/assets/cake-8.png" className="d-block" alt="..." />
                         </div>
                     </div>
                 </div>
