@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 export const CakeCard = ({ id, category, price, name }) => {
 
@@ -9,7 +11,7 @@ export const CakeCard = ({ id, category, price, name }) => {
                 <div className='row no-gutters'>
                     <Link
                         className='col-12 text-decoration-none'
-                        to={`/cake/${id}`}>
+                        to={`/cake/${id}#cakePage`}>
                         <img src={cakeImageUrl} className='card-img shadow' alt={id} />
                     </Link>
                     <div className='col-12 col-hero'>
@@ -18,7 +20,7 @@ export const CakeCard = ({ id, category, price, name }) => {
                             <p className='card-text'>{price}</p>
                             <Link
                                 className='text-decoration-none btn btn-warning shadow'
-                                to={`/cake/${id}`}>
+                                to={`/cake/${id}#cakePage`}>
                                 Ver Producto
                             </Link>
                         </div>
