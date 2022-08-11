@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import './SubNavBar.css';
 
 
@@ -6,7 +7,7 @@ import './SubNavBar.css';
 export const SubNavBar = () => {
 
     return (
-        <header className="bg-headerE">
+        <header id="subNavBar" className="bg-headerE">
             <div className="bg-navbarE">
                 <div className="containerE">
                     <div className="navbarE">
@@ -16,9 +17,9 @@ export const SubNavBar = () => {
                             <Link className='nav-linkE' to={`/buttercream`}><i>Buttercream</i></Link>
                             <Link className='nav-linkE' to={`/allcakes`}><i>Productos</i></Link>
                         </nav>
-                        <a href="" className="navbar-brandE">
+                        <Link to={`/homePage#Home`} className="navbar-brandE">
                             <img src="../assets/logo-letra.png" alt="logo" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
