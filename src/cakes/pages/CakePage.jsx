@@ -27,15 +27,18 @@ export const CakePage = () => {
     return (
         <>
             <SubNavBar />
-            <div id="cakePage" className="row container-fluid mt-4 justify-content-center">
-                <div className="col-11 col-md-6 py-5 ps-4 my-2 mt-5 imgCardPage">
+            <div id="cakePage" className="text-center p-3">
+                <h2>{cake.name}</h2>
+            </div>
+            <div className="row container-fluid mt-4 justify-content-center">
+                <div className="col-11 col-md-6 ps-4 my-2  imgCardPage">
                     <img
                         src={cakeImageUrl}
                         alt={cake.id}
                         className="img-thumbnail animate__animated animate__fadeInLeft shadow"
                     />
                 </div>
-                <div className="col-11 col-md-5 py-3 my-2 mt-5 ">
+                <div className="col-11 col-md-5 py-2 my-2 mt-5 ">
                     <h3>{cake.name}</h3>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item"><b>Precio: </b>{cake.price}</li>
