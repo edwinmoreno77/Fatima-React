@@ -1,25 +1,11 @@
-import { useEffect, useMemo } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { getProducts } from '../../store/cakes/thunks';
-
+import { useMemo } from 'react'
+import { useCake } from '../../hooks/useCake';
 import { getProductByState } from '../helpers/getProductState';
 import { CakeCard } from './CakeCard';
 
 export const CakeList = (available) => {
 
-
-    const dispatch = useDispatch();
-
-
-    const { cakes: torta } = useSelector(state => state.cake);
-
-
-    useEffect(() => {
-
-        dispatch(getProducts(100));
-
-    }, [])
-
+    const { cakes: torta } = useCake();
 
     const cakes = useMemo(() => getProductByState(available, torta), [available, torta]);
 

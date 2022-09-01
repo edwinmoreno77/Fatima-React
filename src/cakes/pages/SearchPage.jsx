@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 
@@ -7,7 +5,7 @@ import { useForm } from "../../hooks/useForm"
 import { CakeCard } from "../components/CakeCard";
 import { getCakeByName } from "../helpers/getCakeByName";
 import { SubNavBar } from "../../ui";
-import { getProducts } from '../../store/cakes/thunks';
+import { useCake } from '../../hooks/useCake';
 
 
 
@@ -16,16 +14,7 @@ export const SearchPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const dispatch = useDispatch();
-
-    const { cakes: torta } = useSelector(state => state.cake);
-
-    useEffect(() => {
-
-        dispatch(getProducts(100));
-
-    }, [])
-
+    const { cakes: torta } = useCake();
 
     const { q = '' } = queryString.parse(location.search);
 

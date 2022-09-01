@@ -1,10 +1,8 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-
+import { useCake } from "../../hooks/useCake";
 import { SubNavBar } from "../../ui";
 import { getCakeById } from '../helpers/getCakeById';
-import { getProducts } from "../../store/cakes/thunks";
 
 
 
@@ -12,19 +10,11 @@ export const CakePage = () => {
 
     const { uid } = useParams();
 
-    const dispatch = useDispatch();
-
-    const { cakes } = useSelector(state => state.cake);
-
-    useEffect(() => {
-
-        dispatch(getProducts(100));
-
-    }, [])
-
-    const navigate = useNavigate();
+    const { cakes } = useCake();
 
     const cake = useMemo(() => getCakeById(uid, cakes), [uid, cakes]);
+
+    const navigate = useNavigate();
 
     const onNavigateBack = () => {
         navigate(-1);
