@@ -2,6 +2,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 
 
+
 export const HomePage = () => {
 
     return (
@@ -25,11 +26,11 @@ export const HomePage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <Link to={`/cake/cake-1#cakePage`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                            <Link to={`/cake/62e809152f4afb94ef55535e#cakePage`} className="btn btn-outline-light mb-5 mb-lg-0"><i
                                 className="bi bi-calendar-event"></i><i>Agendar</i></Link>
 
                         </div>
-                        <Link to={`/cake/cake-1#cakePage`} className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
+                        <Link to={`/cake/62e809152f4afb94ef55535e#cakePage`} className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
                             <img src="/assets/cake-1.png" alt="" className="img-fluid" />
                         </Link>
 
@@ -41,10 +42,10 @@ export const HomePage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <Link to={`/cake/cake-10#cakePage`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                            <Link to={`/cake/62e8248c527110bfc3fbd280#cakePage`} className="btn btn-outline-light mb-5 mb-lg-0"><i
                                 className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
-                        <Link to={`/cake/cake-10#cakePage`} className="col-12 col-lg-7 img-servicios d-flex justify-content-center my-5">
+                        <Link to={`/cake/62e8248c527110bfc3fbd280#cakePage`} className="col-12 col-lg-7 img-servicios d-flex justify-content-center my-5">
                             <img src="/assets/cake-10.png" alt="" className="img-fluid" />
                         </Link>
                     </div>
@@ -55,10 +56,10 @@ export const HomePage = () => {
                             <hr />
                             <p><i> Deliciosa cake de Chocolate decorada con fresas y brownie. Puedes agendar con 48hrs de
                                 anticipacion.</i></p>
-                            <Link to={`/cake/cake-6#cakePage`} className="btn btn-outline-light mb-5 mb-lg-0"><i
+                            <Link to={`/cake/62e839f464ad0a604cdbcdc5#cakePage`} className="btn btn-outline-light mb-5 mb-lg-0"><i
                                 className="bi bi-calendar-event"></i><i>Agendar</i></Link>
                         </div>
-                        <Link to={`/cake/cake-6#cakePage`} className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
+                        <Link to={`/cake/62e839f464ad0a604cdbcdc5#cakePage`} className="col-12 col-lg-8 img-servicios d-flex justify-content-center my-5">
                             <img src="/assets/cake-6.png" alt="" className="img-fluid" />
                         </Link>
                     </div>

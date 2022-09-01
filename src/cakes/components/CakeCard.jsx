@@ -2,17 +2,16 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
 
-export const CakeCard = ({ id, category, price, name }) => {
+export const CakeCard = ({ uid, category, price, name, description, img }) => {
 
-    const cakeImageUrl = `./assets/${id}.png`;
     return (
         <div className='imgCard animate__animated animate__fadeIn'>
             <div className='card shadow mb-2'>
                 <div className='row no-gutters'>
                     <Link
                         className='col-12 text-decoration-none'
-                        to={`/cake/${id}#cakePage`}>
-                        <img src={cakeImageUrl} className='card-img shadow' alt={id} />
+                        to={`/cake/${uid}#cakePage`}>
+                        <img src={img} className='card-img shadow' alt={name} />
                     </Link>
                     <div className='col-12 col-hero'>
                         <div className='card-body'>
@@ -20,7 +19,7 @@ export const CakeCard = ({ id, category, price, name }) => {
                             <p className='card-text'>{price}</p>
                             <Link
                                 className='text-decoration-none btn btn-warning shadow'
-                                to={`/cake/${id}#cakePage`}>
+                                to={`/cake/${uid}#cakePage`}>
                                 Ver Producto
                             </Link>
                         </div>

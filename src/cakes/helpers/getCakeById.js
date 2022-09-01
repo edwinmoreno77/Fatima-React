@@ -1,8 +1,6 @@
-import { cakes } from "../../data/cakes";
 
 
+export const getCakeById = (uid, cakes) => {
 
-export const getCakeById = (id) => {
-
-    return cakes.find(cake => cake.id === id);
+    return cakes.find(cake => cake.uid === uid);
 }

@@ -1,19 +1,34 @@
-import { useMemo } from 'react'
-// import { getCakeByCategory } from '../helpers/getCakeByCategory';
-import { getProductByName } from '../helpers/getProductName';
+import { useEffect, useMemo } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../../store/cakes/thunks';
+
+import { getProductByState } from '../helpers/getProductState';
 import { CakeCard } from './CakeCard';
 
-export const CakeList = ({ productName }) => {
+export const CakeList = (available) => {
 
-    // const cakes = useMemo(() => getCakeByCategory(category), [category]);
-    const cakes = useMemo(() => getProductByName(productName), [productName]);
+
+    const dispatch = useDispatch();
+
+
+    const { cakes: torta } = useSelector(state => state.cake);
+
+
+    useEffect(() => {
+
+        dispatch(getProducts(100));
+
+    }, [])
+
+
+    const cakes = useMemo(() => getProductByState(available, torta), [available, torta]);
 
     return (
         <div className='row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4'>
             {cakes.map(cake => {
                 return (
                     <CakeCard
-                        key={cake.id}
+                        key={cake.uid}
                         {...cake} />
                 )
             })}

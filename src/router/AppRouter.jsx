@@ -16,7 +16,7 @@ export const AppRouter = () => {
                 <Route path="ganache" element={<GanachePage />} />
                 <Route path="allCakes" element={<AllCakesPages />} />
                 <Route path="homePage" element={<HomePage />} />
-                <Route path="cake/:id" element={<CakePage />} />
+                <Route path="cake/:uid" element={<CakePage />} />
                 <Route path="search" element={<SearchPage />} />
 
 

@@ -1,18 +1,30 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+
 import { SubNavBar } from "../../ui";
 import { getCakeById } from '../helpers/getCakeById';
-
+import { getProducts } from "../../store/cakes/thunks";
 
 
 
 export const CakePage = () => {
 
-    const { id } = useParams();
+    const { uid } = useParams();
+
+    const dispatch = useDispatch();
+
+    const { cakes } = useSelector(state => state.cake);
+
+    useEffect(() => {
+
+        dispatch(getProducts(100));
+
+    }, [])
 
     const navigate = useNavigate();
 
-    const cake = useMemo(() => getCakeById(id), [id]);
+    const cake = useMemo(() => getCakeById(uid, cakes), [uid, cakes]);
 
     const onNavigateBack = () => {
         navigate(-1);
@@ -21,8 +33,6 @@ export const CakePage = () => {
     if (!cake) {
         return <Navigate to="/allcakes" />
     }
-
-    const cakeImageUrl = `/assets/${id}.png`;
 
     return (
         <>
@@ -33,8 +43,8 @@ export const CakePage = () => {
             <div className="row container-fluid mt-4 justify-content-center">
                 <div className="col-11 col-md-6 ps-4 my-2  imgCardPage">
                     <img
-                        src={cakeImageUrl}
-                        alt={cake.id}
+                        src={cake.img}
+                        alt={cake.uid}
                         className="img-thumbnail animate__animated animate__fadeInLeft shadow"
                     />
                 </div>
@@ -47,7 +57,7 @@ export const CakePage = () => {
                     </ul>
 
                     <h5 className="mt-3">Descripción</h5>
-                    <p>{cake.name}</p>
+                    <p>{cake.description}</p>
 
                     <button
                         onClick={onNavigateBack}

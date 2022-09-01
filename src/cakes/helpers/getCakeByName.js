@@ -1,6 +1,5 @@
-import { cakes } from "../../data/cakes";
 
-export const getCakeByName = (name = '') => {
+export const getCakeByName = (name = '', cakes) => {
 
     name = name.toLocaleLowerCase().trim();
 

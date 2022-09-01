@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 
@@ -5,6 +7,7 @@ import { useForm } from "../../hooks/useForm"
 import { CakeCard } from "../components/CakeCard";
 import { getCakeByName } from "../helpers/getCakeByName";
 import { SubNavBar } from "../../ui";
+import { getProducts } from '../../store/cakes/thunks';
 
 
 
@@ -13,9 +16,20 @@ export const SearchPage = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const dispatch = useDispatch();
+
+    const { cakes: torta } = useSelector(state => state.cake);
+
+    useEffect(() => {
+
+        dispatch(getProducts(100));
+
+    }, [])
+
+
     const { q = '' } = queryString.parse(location.search);
 
-    const cakes = getCakeByName(q);
+    const cakes = getCakeByName(q, torta);
 
     const showSearch = (q.length === 0);
     const showError = (q.length > 0) && cakes.length === 0;
@@ -32,12 +46,10 @@ export const SearchPage = () => {
     }
 
 
-
     return (
         <>
             <SubNavBar />
             <div className="row container-fluid">
-
                 <div className="col-9 col-md-5 m-5">
                     <h4>Buscador</h4>
                     <form onSubmit={onSearchSubmit}>
@@ -50,37 +62,29 @@ export const SearchPage = () => {
                             value={searchText}
                             onChange={onInputChange}
                         />
-
                         <button className="btn btn-warning mt-5 shadow">
                             Buscar
                         </button>
                     </form>
-
                 </div>
-
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-3 m-2 p-5">
                         <div className=" mt-5 alert alert-primary animate__animated animate__fadeIn"
                             style={{ display: showSearch ? '' : 'none' }}>
                             Buscar una cake
                         </div>
-
                         <div className="mb-5 alert alert-danger animate__animated animate__fadeIn"
                             style={{ display: showError ? '' : 'none' }}>
                             no hay cakes con <b>{q}</b>
                         </div>
-
                         {
                             cakes.map(cake => (
-                                <CakeCard key={cake.id} {...cake} />
+                                <CakeCard key={cake.uid} {...cake} />
                             ))
                         }
                     </div>
-
                 </div>
-
             </div>
-
         </>
     )
 }
