@@ -1,10 +1,16 @@
 import { HashLink as Link } from 'react-router-hash-link';
+import { useCake } from '../../hooks/useCake';
 import { Slider } from '../../ui';
 
 
 
 
 export const HomePage = () => {
+
+    //por el momento solo tiene como finalidad cargar los
+    //productos de manera que al darle click los muestre rapidamente.
+    const { cakes: torta } = useCake();
+
 
     return (
         <>

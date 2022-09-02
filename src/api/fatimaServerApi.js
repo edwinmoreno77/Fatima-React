@@ -12,6 +12,18 @@ export const fatimaServerApi = axios.create({
 
 //Todo: config interceptors
 
+fatimaServerApi.interceptors.request.use(config => {
+
+    config.headers = {
+        ...config.headers,
+        'x-auth-token': localStorage.getItem('token')
+    }
+
+    return config;
+});
+
+
+
 
 
 export default fatimaServerApi;

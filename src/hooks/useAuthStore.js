@@ -46,20 +46,22 @@ export const useAuthStore = () => {
     }
 
 
-    // const checkAuthToken = async () => {
-    //     const token = localStorage.getItem('token');
-    //     if (!token) return dispatch(onLogout());
+    const checkAuthToken = async () => {
+        const token = localStorage.getItem('token');
+        if (!token) return dispatch(onLogout());
 
-    //     try {
-    //         const { data } = await fatimaServerApi.get('auth/renew');
-    //         localStorage.setItem('token', data.token);
-    //         localStorage.setItem('token-init-date', new Date().getTime());
-    //         dispatch(onLogin({ name: data.name, uid: data.uid }));
-    //     } catch (error) {
-    //         localStorage.clear();
-    //         dispatch(onLogout());
-    //     }
-    // }
+        try {
+            const { data } = await fatimaServerApi.get('/api/auth/renew');
+
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('token-init-date', new Date().getTime());
+            dispatch(onLogin({ name: data.name, uid: data.uid }));
+
+        } catch (error) {
+            localStorage.clear();
+            dispatch(onLogout());
+        }
+    }
 
     const startLogout = () => {
         localStorage.clear();
@@ -75,7 +77,7 @@ export const useAuthStore = () => {
         user,
 
         //* Métodos
-        // checkAuthToken,
+        checkAuthToken,
         startLogin,
         startLogout,
         startRegister,
