@@ -1,12 +1,12 @@
 import axios from "axios";
-import { getEnvVariables } from "../helpers/getEnvVariables";
+// import { getEnvVariables } from "../helpers/getEnvVariables";
 
 
-
-const { VITE_API_FATIMA_URL } = getEnvVariables();
+//de esta manera se puede optener la variable de entorno para no tener problemas con los test
+// const { VITE_API_FATIMA_URL } = getEnvVariables();
 
 export const fatimaServerApi = axios.create({
-    baseURL: VITE_API_FATIMA_URL
+    baseURL: import.meta.env.VITE_API_FATIMA_URL
 
 });
 
