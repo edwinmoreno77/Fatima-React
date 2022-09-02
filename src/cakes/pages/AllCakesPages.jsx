@@ -1,9 +1,11 @@
-import { SubNavBar } from '../../ui';
+import { Slider, SubNavBar } from '../../ui';
 import { CakeList } from '../components/CakeList';
 
 export const AllCakesPages = () => {
     return (
         <>
+            {/* <Slider /> */}
+
             <SubNavBar />
             <h1 className='text-center py-4'><i>Productos</i></h1>
             <div className="m-3">

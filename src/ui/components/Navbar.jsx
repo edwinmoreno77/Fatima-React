@@ -27,7 +27,9 @@ export const Navbar = () => {
                                 <a href="#Contactos" className="nav-link">
                                     <i>Contactos</i>
                                 </a>
-
+                            </li>
+                            <li className="nav-item">
+                                <Link className='nav-link btn' to={`/login#Login`}><i>Iniciar Sesion</i></Link>
                             </li>
 
                         </ul>

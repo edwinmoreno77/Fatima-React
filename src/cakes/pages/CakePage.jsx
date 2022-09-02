@@ -26,8 +26,8 @@ export const CakePage = () => {
 
     return (
         <>
-            <SubNavBar />
-            <div id="cakePage" className="text-center p-3">
+            {/* <SubNavBar /> */}
+            <div id="cakePage" className="text-center pt-5 mt-5">
                 <h2>{cake.name}</h2>
             </div>
             <div className="row container-fluid mt-4 justify-content-center">

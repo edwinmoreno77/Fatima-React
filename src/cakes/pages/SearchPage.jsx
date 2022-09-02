@@ -1,10 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 
-import { useForm } from "../../hooks/useForm"
+import { useForm } from "../../hooks/useFormSearch"
 import { CakeCard } from "../components/CakeCard";
 import { getCakeByName } from "../helpers/getCakeByName";
-import { SubNavBar } from "../../ui";
+import { Slider, SubNavBar } from "../../ui";
 import { useCake } from '../../hooks/useCake';
 
 
@@ -37,6 +37,8 @@ export const SearchPage = () => {
 
     return (
         <>
+            {/* <Slider /> */}
+
             <SubNavBar />
             <div className="row container-fluid">
                 <div className="col-9 col-md-5 m-5">

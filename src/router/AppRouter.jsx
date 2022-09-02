@@ -9,7 +9,7 @@ export const AppRouter = () => {
     return (
         <>
             <Navbar />
-            <Slider />
+            {/* <Slider /> */}
             <Routes>
                 <Route path="login" element={<LoginPage />} />
                 <Route path="buttercream" element={<ButterCreamPage />} />
@@ -19,8 +19,9 @@ export const AppRouter = () => {
                 <Route path="cake/:uid" element={<CakePage />} />
                 <Route path="search" element={<SearchPage />} />
 
+                {/* <Route path="/" element={<Navigate to="/homePage" />} /> */}
+                <Route path="/" element={<Navigate to="/login" />} />
 
-                <Route path="/" element={<Navigate to="/homePage" />} />
 
             </Routes>
             <Footer />

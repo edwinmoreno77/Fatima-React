@@ -1,3 +1,3 @@
 
 
-export * as fatimaServerApi from './fatimaServerApi';
+export { default as fatimaServerApi } from './fatimaServerApi';
