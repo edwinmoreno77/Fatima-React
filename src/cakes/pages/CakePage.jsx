@@ -1,7 +1,8 @@
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useAuthStore } from "../../hooks";
 import { useCake } from "../../hooks/useCake";
-import { SubNavBar } from "../../ui";
+import { updateImgProduct } from "../../store/cakes/thunks";
 import { getCakeById } from '../helpers/getCakeById';
 
 
@@ -12,6 +13,8 @@ export const CakePage = () => {
 
     const { cakes } = useCake();
 
+    const { user } = useAuthStore();
+
     const cake = useMemo(() => getCakeById(uid, cakes), [uid, cakes]);
 
     const navigate = useNavigate();
@@ -20,13 +23,20 @@ export const CakePage = () => {
         navigate(-1);
     }
 
+    const fileInputRef = useRef();
+
+    const onFileInputChange = ({ target }) => {
+        if (target.files === 0) return;
+
+        updateImgProduct(target.files, uid);
+    }
+
     if (!cake) {
         return <Navigate to="/allcakes" />
     }
 
     return (
         <>
-            {/* <SubNavBar /> */}
             <div id="cakePage" className="text-center pt-5 mt-5">
                 <h2>{cake.name}</h2>
             </div>
@@ -55,9 +65,24 @@ export const CakePage = () => {
                         Regresar
                     </button>
 
+                    <input
+                        className='d-none'
+                        type="file"
+                        ref={fileInputRef}
+                        onChange={onFileInputChange}
+                    />
+                    <div>
+                        {
+                            (user.role === 'ADMIN_ROLE')
+                                ? <button className="p-2 mt-4 btn btn-warning shadow"
+                                    onClick={() => fileInputRef.current.click()}>
+                                    actualizar imagen
+                                    <i className="fa-sharp fa-solid fa-upload"></i>
+                                </button> : null
+                        }
+                    </div>
                 </div>
             </div>
         </>
-
     )
 }

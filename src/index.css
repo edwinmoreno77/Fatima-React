@@ -35,6 +35,21 @@ code {
 
 }
 
+.user-name {
+  background: linear-gradient(90deg, #ffbe7d, #fff);
+  font-size: 1.2rem;
+  letter-spacing: -.08em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@media(min-width: 576px) {
+  .user-name {
+    font-size: 1.5rem;
+    letter-spacing: -.06em;
+  }
+}
+
 /* nabvar */
 
 
@@ -65,6 +80,21 @@ code {
 
 
 /* IMAGENES DE HOMEPAGE */
+@media(max-width: 576px) {
+
+  .img-servicios img {
+    width: 100%;
+    transform: scale(1);
+    transition: 1s ease-in-out;
+  }
+
+  .img-servicios:hover img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 1.5em #cd940faa);
+
+  }
+}
+
 @media(min-width: 1200px) {
 
   .img-servicios img {

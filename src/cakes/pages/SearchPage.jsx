@@ -1,11 +1,11 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 
-import { useForm } from "../../hooks/useFormSearch"
 import { CakeCard } from "../components/CakeCard";
 import { getCakeByName } from "../helpers/getCakeByName";
-import { Slider, SubNavBar } from "../../ui";
+import { SubNavBar } from "../../ui";
 import { useCake } from '../../hooks/useCake';
+import { useFormSearch } from "../../hooks";
 
 
 
@@ -24,7 +24,7 @@ export const SearchPage = () => {
     const showError = (q.length > 0) && cakes.length === 0;
 
 
-    const { searchText, onInputChange } = useForm({
+    const { searchText, onInputChange } = useFormSearch({
         searchText: q
     });
 
@@ -37,8 +37,6 @@ export const SearchPage = () => {
 
     return (
         <>
-            {/* <Slider /> */}
-
             <SubNavBar />
             <div className="row container-fluid">
                 <div className="col-9 col-md-5 m-5">

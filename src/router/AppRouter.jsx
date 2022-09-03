@@ -38,7 +38,6 @@ export const AppRouter = () => {
                             <Route path="cake/:uid" element={<CakePage />} />
                             <Route path="search" element={<SearchPage />} />
                             <Route path="/*" element={<Navigate to="homePage#Home" />} />
-
                         </>
 
 

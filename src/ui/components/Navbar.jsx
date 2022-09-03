@@ -12,7 +12,7 @@ export const Navbar = () => {
                 <div className="container">
                     <a href="https://www.instagram.com/fatima.afta/?hl=es" className="navbar-brand">
                         <img src="/assets/logo.png" alt="" /></a>
-                    <h2 className='text-white-50'>{user.name}</h2>
+                    <h5 className='text-white-50 user-name'>{user.name}</h5>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
