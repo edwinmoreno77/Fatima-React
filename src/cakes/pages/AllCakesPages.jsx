@@ -7,7 +7,7 @@ export const AllCakesPages = () => {
             {/* <Slider /> */}
 
             <SubNavBar />
-            <h1 className='text-center py-4'><i>Productos</i></h1>
+            <h1 className='text-center py-4 tituloPage'><i>Productos</i></h1>
             <div className="m-3">
                 <CakeList available={true} />
             </div>

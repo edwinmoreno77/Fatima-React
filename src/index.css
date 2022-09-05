@@ -80,7 +80,34 @@ code {
 
 
 /* IMAGENES DE HOMEPAGE */
+
+.titulo-homePage {
+  background: linear-gradient(90deg, #ff6200, rgb(255, 230, 131));
+  font-size: 4rem;
+  letter-spacing: -.08em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+.titulo-favoritos {
+  background: linear-gradient(90deg, #ff6200, rgb(255, 230, 131));
+  font-size: 4.5rem;
+  letter-spacing: -.08em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
 @media(max-width: 576px) {
+
+  .titulo-homePage {
+    font-size: 2rem;
+  }
+
+  .titulo-favoritos {
+    font-size: 2.5rem;
+  }
 
   .img-servicios img {
     width: 100%;
@@ -111,7 +138,33 @@ code {
   }
 }
 
+
 /* IMAGENES DE HOMEPAGE */
+
+
+/* PRODUCTOS */
+
+.tituloPage {
+  background: linear-gradient(90deg, #ff6200, rgb(255, 230, 131));
+  font-size: 4.5rem;
+  letter-spacing: -.05em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+@media(max-width: 576px) {
+  .tituloPage {
+    font-size: 3.5rem;
+
+  }
+
+}
+
+
+
+
+/* PRODUCTOS */
 
 
 
@@ -185,6 +238,31 @@ code {
 
 
 /* ANIMACIONES DE ICONOS  */
+
+/* CAKE-PAGE */
+
+.titulo-cakePage {
+
+  background: linear-gradient(90deg, #ff6d12, rgb(255, 182, 108));
+  font-size: 1.5rem;
+  letter-spacing: -.08em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+.item-cakePage {
+
+  background: linear-gradient(90deg, #ff6d12, rgb(253, 155, 57));
+  font-size: 1.05rem;
+  letter-spacing: -.08em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+
+/* CAKE-PAGE */
 
 
 /* footer */

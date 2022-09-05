@@ -40,7 +40,7 @@ export const SearchPage = () => {
             <SubNavBar />
             <div className="row container-fluid">
                 <div className="col-9 col-md-5 m-5">
-                    <h4>Buscador</h4>
+                    <h4 className="tituloPage">Buscador</h4>
                     <form onSubmit={onSearchSubmit}>
                         <input
                             className="form-control shadow mt-5"

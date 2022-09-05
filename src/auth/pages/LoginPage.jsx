@@ -16,12 +16,9 @@ const registerFormFields = {
     registerPassword2: '',
 }
 
-
-
 export const LoginPage = () => {
 
-    const { startLogin, errorMessage, startRegister, startLogout } = useAuthStore();
-
+    const { startLogin, errorMessage, startRegister } = useAuthStore();
     const { loginEmail, loginPassword, onInputChange: onLoginInputChange } = useForm(loginFormFields);
     const { registerEmail, registerName, registerPassword, registerPassword2, onInputChange: onRegisterInputChange } = useForm(registerFormFields);
 
@@ -40,15 +37,11 @@ export const LoginPage = () => {
         startRegister({ name: registerName, email: registerEmail, password: registerPassword });
     }
 
-
     useEffect(() => {
         if (errorMessage !== undefined) {
             Swal.fire('Error en la autenticación', errorMessage, 'error');
         }
     }, [errorMessage])
-
-
-
 
     return (
         <div id='Login' className="container login-container">

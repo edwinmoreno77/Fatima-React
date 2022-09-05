@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 
 import { LoginPage } from "../auth/pages/LoginPage";
-import { AllCakesPages, ButterCreamPage, CakePage, GanachePage, HomePage, SearchPage } from "../cakes";
+import { AllCakesPages, ButterCreamPage, CakePage, GanachePage, HomePage, NosotrosPage, SearchPage } from "../cakes";
 import { useAuthStore } from "../hooks";
 import { Footer, Navbar } from "../ui";
 
@@ -37,6 +37,7 @@ export const AppRouter = () => {
                             <Route path="homePage" element={<HomePage />} />
                             <Route path="cake/:uid" element={<CakePage />} />
                             <Route path="search" element={<SearchPage />} />
+                            <Route path="nosotros" element={<NosotrosPage />} />
                             <Route path="/*" element={<Navigate to="homePage#Home" />} />
                         </>
 

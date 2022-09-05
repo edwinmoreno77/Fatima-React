@@ -14,7 +14,7 @@ export const GanachePage = () => {
     return (
         <>
             <SubNavBar />
-            <h1 className='text-center py-4'><i>Ganache</i></h1>
+            <h1 className='text-center py-4 tituloPage'><i>Ganache</i></h1>
             <div className="m-3">
                 <CakeListByCategory category={'CHOCOLATE'} />
             </div>
