@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { useFormSearch } from '../../hooks/useFormSearch';
 import { createProduct } from '../../store/cakes/thunks';
 

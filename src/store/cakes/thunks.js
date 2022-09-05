@@ -40,12 +40,9 @@ export const updateImgProduct = async (file = [], uid) => {
     try {
         const resp = await fatimaServerApi.put(`/api/uploads/products/${uid}`, formData);
 
-        console.log(resp.statusText);
-
         if (resp.statusText === 'OK') {
             Swal.fire('Cargada con Exito', 'success', 'success');
         }
-
 
     } catch (error) {
         console.log(error);
