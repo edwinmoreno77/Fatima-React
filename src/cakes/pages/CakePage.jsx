@@ -15,9 +15,7 @@ export const CakePage = () => {
 
     const cake = useMemo(() => getCakeById(uid, cakes), [uid, cakes]);
 
-    const { category } = cake;
-
-    const { _id } = category;
+    const { _id } = cake.category
 
     const navigate = useNavigate();
 

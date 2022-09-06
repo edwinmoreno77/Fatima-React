@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useFormSearch } from '../../hooks/useFormSearch';
 import { createProduct } from '../../store/cakes/thunks';
+import Swal from 'sweetalert2';
 
 
 const uploadProduct = {
@@ -10,12 +13,28 @@ const uploadProduct = {
 
 export const AddCakes = ({ category }) => {
 
+    const dispatch = useDispatch();
+
     const { name, description, price, onInputChange } = useFormSearch(uploadProduct);
+
+    const { errorMessage } = useSelector(state => state.cake);
 
     const uploadProductSubmit = (event) => {
         event.preventDefault();
-        createProduct(name, description, price, category);
+        dispatch(createProduct(name, description, price, category));
     }
+
+    useEffect(() => {
+
+        if (errorMessage != undefined) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: errorMessage,
+                footer: 'Algo salio mal'
+            })
+        }
+    }, [errorMessage])
 
     return (
         <>

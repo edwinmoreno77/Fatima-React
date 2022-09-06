@@ -1,5 +1,5 @@
 import { fatimaServerApi } from "../../api/fatimaServerApi";
-import { setProducts, startLoadingProducts } from "./cakeSlice";
+import { clearErrorsMessage, setProducts, showErrorMessage, startLoadingProducts } from "./cakeSlice";
 import Swal from 'sweetalert2';
 
 
@@ -15,17 +15,26 @@ export const getProducts = (limit = 100) => {
     }
 }
 
-export const createProduct = async (name, description, price, category) => {
+export const createProduct = (name, description, price, category) => {
 
-    try {
-        const resp = await fatimaServerApi.post('/api/products', { name, description, price, category });
+    return async (dispatch) => {
 
-        if (resp.statusText === 'Created') {
-            Swal.fire('Creado con Exito', 'success', 'success');
+        try {
+            const resp = await fatimaServerApi.post('/api/products', { name, description, price, category });
+
+            if (resp.statusText === 'Created') {
+                Swal.fire('Creado con Exito', 'success', 'success');
+            }
+
+        } catch (error) {
+            console.log(error);
+            dispatch(showErrorMessage(error.response.data?.msg || 'Error desconocido'));
+
+            setTimeout(() => {
+
+                dispatch(clearErrorsMessage());
+            }, 2000);
         }
-
-    } catch (error) {
-        console.log(error);
     }
 
 }
@@ -67,19 +76,27 @@ export const deleteImgProduct = async (uid) => {
 
 }
 
-export const updateProductsThunks = async (uid, name, price, description, category) => {
+export const updateProductsThunks = (uid, name, price, description, category) => {
 
-    try {
-        const resp = await fatimaServerApi.put(`/api/products/${uid}`, { name, price, description, category });
+    return async (dispatch) => {
 
-        if (resp.statusText === 'OK') {
-            Swal.fire('Actualizado con Exito', 'success', 'success');
+        try {
+            const resp = await fatimaServerApi.put(`/api/products/${uid}`, { name, price, description, category });
+
+            if (resp.statusText === 'OK') {
+                Swal.fire('Actualizado con Exito', 'success', 'success');
+            }
+
+        } catch (error) {
+            console.log(error);
+            dispatch(showErrorMessage(error.response.data?.errors[0].msg || 'Error desconocido'));
+
+            setTimeout(() => {
+
+                dispatch(clearErrorsMessage());
+            }, 2000);
         }
-
-    } catch (error) {
-        console.log(error);
     }
-
 }
 
 

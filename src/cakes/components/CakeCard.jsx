@@ -15,7 +15,7 @@ export const CakeCard = ({ uid, category, price, name, description, img }) => {
                     </Link>
                     <div className='col-12 col-hero'>
                         <div className='card-body'>
-                            <h5 className='card-title'>{name}</h5>
+                            <h6 className='card-title'>{name}</h6>
                             <p className='card-text'>{price}</p>
                             <Link
                                 className='text-decoration-none btn btn-warning shadow'
