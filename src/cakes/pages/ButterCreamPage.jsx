@@ -13,9 +13,11 @@ export const ButterCreamPage = () => {
     return (
         <>
             <SubNavBar />
-            <h1 className='text-center py-4 tituloPage'><i>Buttercream</i></h1>
-            <div className="m-3">
-                <CakeListByCategory category={'BUTTERCREAM'} />
+            <div className='bg-position-pages'>
+                <div className="m-3 bg-productos-pages">
+                    <h1 className='text-center py-4 tituloPage'><i>Buttercream</i></h1>
+                    <CakeListByCategory category={'BUTTERCREAM'} />
+                </div>
             </div>
             {
                 (user.role === 'ADMIN_ROLE') ?

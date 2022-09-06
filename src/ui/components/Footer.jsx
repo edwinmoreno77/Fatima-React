@@ -2,7 +2,7 @@
 export const Footer = () => {
     return (
 
-        <footer id="Contactos" className="bg-dark text-white d-flex justify-content-center">
+        <footer id="Contactos" className="bg-dark text-white d-flex justify-content-center bg-position-pages">
             <div className="container m-5">
                 <div className="container my-5 display-6 fs-2">
                     <h2 className="my-2"><i>Pasteleria Fatima Antofagasta</i></h2>

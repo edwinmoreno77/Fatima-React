@@ -14,9 +14,11 @@ export const GanachePage = () => {
     return (
         <>
             <SubNavBar />
-            <h1 className='text-center py-4 tituloPage'><i>Ganache</i></h1>
-            <div className="m-3">
-                <CakeListByCategory category={'CHOCOLATE'} />
+            <div className='bg-position-pages'>
+                <div className="m-3 bg-productos-pages">
+                    <h1 className='text-center py-4 tituloPage'><i>Ganache</i></h1>
+                    <CakeListByCategory category={'CHOCOLATE'} />
+                </div>
             </div>
             {
                 (user.role === 'ADMIN_ROLE') ?

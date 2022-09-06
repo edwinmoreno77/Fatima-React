@@ -45,8 +45,8 @@ export const LoginPage = () => {
 
     return (
         <div id='Login' className="container login-container">
-            <div className="row">
-                <div className="col-md-6 login-form-1">
+            <div className="row bg-productos-pages">
+                <div className="col-md-6 login-form-1 bg-position-pages">
                     <h3>Ingreso</h3>
                     <form onSubmit={loginSubmit}>
                         <div className="form-group mb-2">
@@ -79,7 +79,7 @@ export const LoginPage = () => {
                     </form>
                 </div>
 
-                <div className="col-md-6 login-form-2">
+                <div className="col-md-6 login-form-2  bg-position-pages">
                     <h3>Registro</h3>
                     <form onSubmit={registerSubmit}>
                         <div className="form-group mb-2">

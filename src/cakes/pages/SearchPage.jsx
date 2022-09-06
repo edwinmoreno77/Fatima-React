@@ -38,12 +38,12 @@ export const SearchPage = () => {
     return (
         <>
             <SubNavBar />
-            <div className="row container-fluid">
+            <div className="row container-fluid bg-productos-pages bg-position-pages">
                 <div className="col-9 col-md-5 m-5">
                     <h4 className="tituloPage">Buscador</h4>
                     <form onSubmit={onSearchSubmit}>
                         <input
-                            className="form-control shadow mt-5"
+                            className="form-control shadow mt-5 bg-position-pages"
                             placeholder="Buscar una Cake"
                             type="text"
                             name="searchText"
@@ -51,7 +51,7 @@ export const SearchPage = () => {
                             value={searchText}
                             onChange={onInputChange}
                         />
-                        <button className="btn btn-warning mt-5 shadow">
+                        <button className="btn btn-warning mt-5 shadow bg-position-pages ">
                             Buscar
                         </button>
                     </form>

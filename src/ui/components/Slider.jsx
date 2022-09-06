@@ -7,7 +7,7 @@ export const Slider = () => {
 
     return (
 
-        <section id="Inicio" className=" img-bg-navbar">
+        <section id="Inicio" className=" img-bg-navbar ">
             <div id="carouselExampleControls" className="carousel slide mt-carousel" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" className="active"
