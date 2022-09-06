@@ -21,7 +21,7 @@ export const createProduct = async (name, description, price, category) => {
         const resp = await fatimaServerApi.post('/api/products', { name, description, price, category });
 
         if (resp.statusText === 'Created') {
-            Swal.fire('Cargado con Exito', 'success', 'success');
+            Swal.fire('Creado con Exito', 'success', 'success');
         }
 
     } catch (error) {
@@ -42,6 +42,38 @@ export const updateImgProduct = async (file = [], uid) => {
 
         if (resp.statusText === 'OK') {
             Swal.fire('Cargada con Exito', 'success', 'success');
+        }
+
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+export const deleteImgProduct = async (uid) => {
+
+    if (!uid) throw new Error('No se ha seleccionado uid');
+
+    try {
+        const resp = await fatimaServerApi.delete(`/api/products/${uid}`);
+
+        if (resp.statusText === 'OK') {
+            Swal.fire('Borrado con Exito', 'success', 'success');
+        }
+
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+export const updateProductsThunks = async (uid, name, price, description, category) => {
+
+    try {
+        const resp = await fatimaServerApi.put(`/api/products/${uid}`, { name, price, description, category });
+
+        if (resp.statusText === 'OK') {
+            Swal.fire('Actualizado con Exito', 'success', 'success');
         }
 
     } catch (error) {

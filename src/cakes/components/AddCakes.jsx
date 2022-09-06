@@ -22,39 +22,50 @@ export const AddCakes = ({ category }) => {
             <hr />
             <h3 className='text-center'>Agregar Producto</h3>
             <div className='text-center p-5'>
-                <form onSubmit={uploadProductSubmit}>
-                    <label>Name</label>
-                    <input
-                        className='m-2 m-2 shadow'
-                        type="text"
-                        placeholder='name'
-                        name='name'
-                        value={name}
-                        onChange={onInputChange}
-                    />
-                    <label>description</label>
-                    <input
-                        className='m-2 m-2 shadow'
-                        type="text"
-                        placeholder='description'
-                        name='description'
-                        value={description}
-                        onChange={onInputChange}
-                    />
-                    <label>price</label>
-                    <input
-                        className='m-2 m-2 shadow'
-                        type="text"
-                        placeholder='price'
-                        name='price'
-                        value={price}
-                        onChange={onInputChange}
-                    />
-                    <button
-                        className='btn btn-warning'
-                        type='submit'>
-                        <i className="fa-sharp fa-solid fa-upload"></i>
-                    </button>
+                <form onSubmit={uploadProductSubmit} className='row d-flex justify-content-center'>
+
+                    <div className='col-12 col-md-8 col-lg-4'>
+                        <label>Name</label>
+                        <input
+                            className='m-2 m-2 shadow form-control'
+                            type="text"
+                            placeholder='name'
+                            name='name'
+                            value={name}
+                            onChange={onInputChange}
+                        />
+                    </div>
+
+                    <div className='col-12 col-md-8 col-lg-2'>
+                        <label>price</label>
+                        <input
+                            className='m-2 m-2 shadow form-control'
+                            type="number"
+                            placeholder='price'
+                            name='price'
+                            value={price}
+                            onChange={onInputChange}
+                        />
+                    </div>
+                    <div className='col-12 col-md-8 col-lg-12'>
+                        <label>description</label>
+                        <input
+                            className='m-2 m-2 shadow form-control'
+                            type="text"
+                            placeholder='description'
+                            name='description'
+                            value={description}
+                            onChange={onInputChange}
+                        />
+                    </div>
+
+                    <div className='text-center'>
+                        <button
+                            className='btn btn-warning p-2 m-2'
+                            type='submit'>
+                            <i className="fa-sharp fa-solid fa-upload"></i> Agregar
+                        </button>
+                    </div>
                 </form>
             </div>
             <hr />

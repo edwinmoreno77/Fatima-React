@@ -7,17 +7,17 @@ const FormFields = {
     relleno: '',
     tamaño: '',
     extra: '',
-    fetch: '',
+    fecha: '',
 }
 
 export const CakePageForm = ({ uid }) => {
 
     const onSubmitFromCake = (e) => {
         e.preventDefault();
-        console.log({ uid, biscocho, tamaño, relleno, extra, fecha });
+        console.log({ uid, biscocho, tamaño, relleno, extra, fecha, topper });
     }
 
-    const { biscocho, tamaño, extra, relleno, fecha, onInputChange } = useFormSearch(FormFields);
+    const { biscocho, tamaño, extra, relleno, fecha, topper, onInputChange } = useFormSearch(FormFields);
 
     return (
         <div className="py-1">
@@ -32,7 +32,6 @@ export const CakePageForm = ({ uid }) => {
                     </div>
                     <div className="p-1">
                         <select
-                            id="text-5"
                             className="form-select"
                             required
                             name="biscocho"
@@ -56,9 +55,7 @@ export const CakePageForm = ({ uid }) => {
                     </div>
                     <div className="p-1">
                         <select
-                            id="text-5"
                             className="form-select"
-                            required
                             name="relleno"
                             value={relleno}
                             onChange={onInputChange}
@@ -81,9 +78,7 @@ export const CakePageForm = ({ uid }) => {
                     </div>
                     <div className="p-1">
                         <select
-                            id="text-5"
                             className="form-select "
-                            required
                             name="tamaño"
                             value={tamaño}
                             onChange={onInputChange}
@@ -108,9 +103,7 @@ export const CakePageForm = ({ uid }) => {
                     </div>
                     <div className="p-1">
                         <select
-                            id="text-5"
                             className="form-select"
-                            required
                             name="extra"
                             value={extra}
                             onChange={onInputChange}
@@ -134,15 +127,31 @@ export const CakePageForm = ({ uid }) => {
                         </select>
                     </div>
                 </div>
+
+                <div className="col-12 col-md-12 col-lg-9 d-flex justify-content-between">
+                    <div className="p-1">
+                        <label className="item-cakePage">Topper:</label>
+                    </div>
+                    <div className="p-1">
+                        <input type="text"
+                            className="form-control"
+                            placeholder='Feliz Cumpleaños Fatima'
+                            name="topper"
+                            value={topper}
+                            onChange={onInputChange}
+                        />
+                    </div>
+                </div>
+
+
                 <div className="col-12 col-md-11 col-lg-9 d-flex justify-content-between">
                     <div className="p-1">
-                        <label className=" item-cakePage">Fecha:</label>
+                        <label className=" from-label item-cakePage">Fecha:</label>
                     </div>
                     <div className="p-1">
                         <input
                             type="date"
-                            className="form-select"
-                            required
+                            className="form-control"
                             name="fecha"
                             value={fecha}
                             onChange={onInputChange}

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useCake } from "../../hooks/useCake";
-import { AdminUpdateImg } from "../components/AdminUpdateImg";
+import { ResourceManager } from "../components/ResourceManager";
 import { CakePageForm } from "../components/CakePageForm";
 import { getCakeById } from '../helpers/getCakeById';
 
@@ -14,6 +14,10 @@ export const CakePage = () => {
     const { cakes } = useCake();
 
     const cake = useMemo(() => getCakeById(uid, cakes), [uid, cakes]);
+
+    const { category } = cake;
+
+    const { _id } = category;
 
     const navigate = useNavigate();
 
@@ -52,8 +56,8 @@ export const CakePage = () => {
                     <h5 className="titulo-cakePage mt-3">Descripción:</h5>
                     <p className="p-1">{cake.description}</p>
                     <CakePageForm uid={uid} />
-                    <AdminUpdateImg uid={uid} />
                 </div>
+                <ResourceManager uid={uid} category={_id} />
             </div>
         </>
     )
