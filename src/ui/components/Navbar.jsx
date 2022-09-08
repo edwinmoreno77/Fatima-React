@@ -10,7 +10,7 @@ export const Navbar = () => {
         <div id='Home'>
             <nav id="navbar-id" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
                 <div className="container">
-                    <a href="https://www.instagram.com/fatima.afta/?hl=es" className="navbar-brand">
+                    <a href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer" className="navbar-brand">
                         <img src="/assets/logo.png" alt="" /></a>
                     <h5 className='text-white-50 user-name'>{user.name}</h5>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"

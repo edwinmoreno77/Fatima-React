@@ -50,7 +50,7 @@ export const CakePage = () => {
                             <img
                                 src={cake?.img}
                                 alt={cake?.uid}
-                                className="img-thumbnail animate__animated animate__fadeInLeft shadow"
+                                className=" img-thumbnail animate__animated animate__fadeInLeft"
                             />
                         </div>
                         <div className="col-11 col-md-5 ">

@@ -46,7 +46,7 @@ export const LoginPage = () => {
     return (
         <div id='Login' className="container login-container">
             <div className="row bg-productos-pages">
-                <div className='logo-login'>
+                <div className='logo-login animate__animated animate__heartBeat'>
                     <img src="/assets/logo-letra.png" alt="logo" />
                 </div>
                 <div className="col-md-6 login-form-1 bg-position-pages">
@@ -137,7 +137,7 @@ export const LoginPage = () => {
                 </div>
 
                 <footer id="Contactos" className=" d-flex justify-content-center bg-position-pages">
-                    <div className="container m-5">
+                    <div className="container">
                         <div className="container my-5 display-6 fs-2 text-center">
                             <h4 className="my-2"><i>Bienvenido! inicia sesión con tu cuenta o puedes registrarte y tener acceso de forma rápida y sencilla de tus Cakes favoritas.</i></h4>
                         </div>
@@ -147,19 +147,20 @@ export const LoginPage = () => {
                         </div>
                         <div className="text-center py-2">
                             <i className="bi bi-twitter mx-1 twitter-icon text-primary"><a
-                                href="https://www.instagram.com/fatima.afta/?hl=es"
+                                href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer"
                                 className="text-decoration-none text-dark">Fatima.afta</a></i>
-                            <i className="bi bi-instagram mx-1  instagram-icon"><a href="https://www.instagram.com/fatima.afta/?hl=es"
+                            <i className="bi bi-instagram mx-1  instagram-icon"><a href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer"
                                 className="text-decoration-none text-dark">Fatima.afta</a></i>
                             <i className="bi bi-facebook mx-1  facebook-icon text-primary"><a
-                                href="https://www.instagram.com/fatima.afta/?hl=es"
+                                href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer"
                                 className="text-decoration-none text-dark">Fatima.afta</a></i>
                         </div>
                         <div className="text-center my-2">
                             <i className="bi bi-whatsapp text-success"><a href=""
                                 className="text-decoration-none text-dark">+56-9354159999</a></i>
 
-                            <p> <a href="https://www.google.com/maps/place/Homero+%C3%81vila+955,+Antofagasta/@-23.672912,-70.4057214,17z/data=!3m1!4b1!4m5!3m4!1s0x96afd5a11082bb11:0xd22d1a0e8d51e0a1!8m2!3d-23.672912!4d-70.4035327"
+                            <p> <a
+                                href="https://www.google.com/maps/place/Homero+%C3%81vila+955,+Antofagasta/@-23.672912,-70.4057214,17z/data=!3m1!4b1!4m5!3m4!1s0x96afd5a11082bb11:0xd22d1a0e8d51e0a1!8m2!3d-23.672912!4d-70.4035327" target="_blank" rel="noopener noreferrer"
                                 className="text-decoration-none text-danger"><i className="bi bi-geo-fill"></i></a>Antofagasta-Homero Avila 955</p>
                             <p className="m-2 lead"><i>Derechos Reservados, &copy;Fatima.Afta.</i></p>
                         </div>

@@ -20,12 +20,12 @@ export const HomePage = () => {
                 <div className="container">
                     <h2 className="text-center mb-5 titulo-favoritos"><i>Productos Favoritos</i></h2>
                     <div className="text-center py-1">
-                        <i className="bi bi-twitter mx-1 icon twitter-icon"><a href="https://www.instagram.com/fatima.afta/?hl=es"
+                        <i className="bi bi-twitter mx-1 icon twitter-icon"><a href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer"
                             className="text-decoration-none text-white">Fatima.afta</a></i>
                         <i className="bi bi-instagram mx-1 icon instagram-icon"><a
-                            href="https://www.instagram.com/fatima.afta/?hl=es"
+                            href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer"
                             className="text-decoration-none text-white">Fatima.afta</a></i>
-                        <i className="bi bi-facebook mx-1 icon facebook-icon"><a href="https://www.instagram.com/fatima.afta/?hl=es"
+                        <i className="bi bi-facebook mx-1 icon facebook-icon"><a href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer"
                             className="text-decoration-none text-white">Fatima.afta</a></i>
                     </div>
 
