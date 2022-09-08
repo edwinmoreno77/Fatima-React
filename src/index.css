@@ -16,7 +16,7 @@ code {
     monospace;
 }
 
-/* nabvar */
+/* NABVAR */
 
 .img-bg-navbar {
   background: linear-gradient(90deg, #feb770, rgb(255, 222, 206));
@@ -43,17 +43,35 @@ code {
   -webkit-background-clip: text;
 }
 
+.navbar-user img {
+  width: 3rem;
+  border-radius: 3rem;
+
+}
+
+.navbar-cart {
+  font-size: 1.4rem;
+  color: #ffc596;
+  padding: 5px;
+}
+
+.navbar-cart:hover {
+  font-size: 1.4rem;
+  color: #ff831e;
+  padding: 5px;
+}
+
 @media(min-width: 576px) {
   .user-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: -.06em;
   }
 }
 
-/* nabvar */
+/* NABVAR */
 
 
-/* carousel */
+/* CAROUSEL */
 
 .mt-carousel {
   padding-top: 5.5rem;
@@ -75,7 +93,7 @@ code {
   }
 }
 
-/* carousel */
+/* CAROUSEL */
 
 
 
@@ -200,7 +218,7 @@ code {
 
 
 
-/* card */
+/* CARD */
 
 .imgCard:hover {
   filter: drop-shadow(0 0 0.6em #5a5959aa);
@@ -214,7 +232,7 @@ code {
   filter: drop-shadow(0 0 0.6em #5a5959aa);
 }
 
-/* card */
+/* CARD */
 
 
 /* ANIMACIONES DE ICONOS  */
@@ -342,11 +360,7 @@ code {
 
 
 
-
-
-
-
-/* footer */
+/* FOOTER */
 
 .img-footer img {
   width: 6rem;
@@ -359,10 +373,10 @@ code {
   filter: drop-shadow(0 0 0.6em #cd940faa);
 }
 
-/* footer */
+/* FOOTER */
 
 
-/* btn */
+/* BTN */
 
 
 .btn-warning {
@@ -390,4 +404,4 @@ code {
 
 }
 
-/* btn */
+/* BTN */

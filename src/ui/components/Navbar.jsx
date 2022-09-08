@@ -8,11 +8,17 @@ export const Navbar = () => {
 
     return (
         <div id='Home'>
-            <nav id="navbar-id" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+            <nav id="navbar-id" className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container">
-                    <a href="https://www.instagram.com/fatima.afta/?hl=es" target="_blank" rel="noopener noreferrer" className="navbar-brand">
-                        <img src="/assets/logo.png" alt="" /></a>
-                    <h5 className='text-white-50 user-name'>{user.name}</h5>
+                    <a href="https://www.instagram.com/fatima.afta/?hl=es"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="navbar-brand">
+                        <img src="/assets/logo.png" alt="" />
+                    </a>
+                    <div className='navbar-user d-flex justify-content-center align-items-center'>
+                        <h5 className='text-white-50 ms-3 user-name'>{user.name}</h5>
+                    </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -36,25 +42,37 @@ export const Navbar = () => {
                                     <i>Contactos</i>
                                 </a>
                             </li>
-
                             {
                                 (status === 'authenticated')
                                     ? <li className="nav-item">
-                                        <Link className='nav-link btn'
+                                        <Link
+                                            className='nav-link'
                                             onClick={startLogout}
-                                            to={`/login#Login`}><i>&nbsp;Cerrar Sesion</i></Link>
-                                    </li> : <li className="nav-item">
-                                        <Link className='nav-link btn' to={`/login#Login`}><i>&nbsp;Iniciar Sesion</i></Link>
+                                            to={`/login#Login`}
+                                        >
+                                            <i>Cerrar Sesion</i>
+                                        </Link>
+                                    </li>
+                                    : <li className="nav-item">
+                                        <Link
+                                            className='nav-link'
+                                            to={`/login#Login`}
+                                        >
+                                            <i>&nbsp;Iniciar Sesion</i></Link>
                                     </li>
                             }
 
-
-
+                            <li className='nav-item navbar-user ms-3'>
+                                <img src="assets/no-image.jpg" alt="" />
+                            </li>
+                            <li className="nav-item ms-4">
+                                <Link className='nav-link' to={`/allcakes#subNavBar`}>
+                                    <i className="fa-sharp fa-solid fa-cart-shopping navbar-cart"></i>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
-
                 </div>
-
             </nav>
         </div>
     )
