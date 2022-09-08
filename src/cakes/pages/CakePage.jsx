@@ -15,7 +15,7 @@ export const CakePage = () => {
 
     const cake = useMemo(() => getCakeById(uid, cakes), [uid, cakes]);
 
-    const { _id } = cake.category
+    const { _id } = cake?.category || {};
 
     const navigate = useNavigate();
 
@@ -23,16 +23,18 @@ export const CakePage = () => {
         navigate(-1);
     }
 
-    if (!cake) {
-        return <Navigate to="/allcakes" />
-    }
+    //valida la ruta, si no existe la ruta, redirecciona a la pagina de inicio
+    //el problema de esta validación es que si se actualiza la pagina, se pierde la ruta y lo enviara a la pagina de inicio.
+    // if (!cake) {
+    //     return <Navigate to="/allcakes" />
+    // }
 
     return (
         <>
             <div className="bg-productos-pages">
                 <div className="bg-position-pages">
                     <div id="cakePage" className="text-center pt-5 mt-5 nameCakePage">
-                        <p>{cake.name}</p>
+                        <p>{cake?.name}</p>
                     </div>
                     <div className="row container-fluid mt-4 justify-content-center">
                         <div className="col-11">
@@ -46,15 +48,15 @@ export const CakePage = () => {
                         </div>
                         <div className="col-11 col-md-6 ps-4 my-2  imgCardPage">
                             <img
-                                src={cake.img}
-                                alt={cake.uid}
+                                src={cake?.img}
+                                alt={cake?.uid}
                                 className="img-thumbnail animate__animated animate__fadeInLeft shadow"
                             />
                         </div>
                         <div className="col-11 col-md-5 ">
-                            <h3 className="titulo-cakePage">PRECIO DE REFERENCIA: {cake.price}</h3>
+                            <h3 className="titulo-cakePage">PRECIO DE REFERENCIA: {cake?.price}</h3>
                             <h5 className="titulo-cakePage mt-3">Descripción:</h5>
-                            <p className="p-1">{cake.description}</p>
+                            <p className="p-1">{cake?.description}</p>
                             <CakePageForm uid={uid} />
                         </div>
                         <ResourceManager uid={uid} category={_id} />

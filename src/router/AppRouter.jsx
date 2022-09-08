@@ -1,52 +1,42 @@
 import { useEffect } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
-import { HashLink as Link } from 'react-router-hash-link';
+import { Route, Routes } from "react-router-dom";
 
 import { LoginPage } from "../auth/pages/LoginPage";
-import { AllCakesPages, ButterCreamPage, CakePage, GanachePage, HomePage, NosotrosPage, SearchPage } from "../cakes";
+import { CakesRoutes } from "../cakes/routes/CakesRoutes";
 import { useAuthStore } from "../hooks";
-import { Footer, Navbar } from "../ui";
+import { Spinner } from "../ui";
+import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
 
 
 export const AppRouter = () => {
 
     const { status, checkAuthToken } = useAuthStore();
 
-
     useEffect(() => {
         checkAuthToken();
 
     }, [])
 
-
+    if (status === 'checking') {
+        return <Spinner />
+    }
 
     return (
         <>
-            <Navbar />
             <Routes>
-                {
-                    (status === 'not-authenticated' || status === 'checking')
-                        ? <>
-                            <Route path="login" element={<LoginPage />} />
-                            <Route path="/*" element={<Navigate to="/login" />} />
-                        </>
-                        : <>
-                            <Route path="buttercream" element={<ButterCreamPage />} />
-                            <Route path="ganache" element={<GanachePage />} />
-                            <Route path="allCakes" element={<AllCakesPages />} />
-                            <Route path="homePage" element={<HomePage />} />
-                            <Route path="cake/:uid" element={<CakePage />} />
-                            <Route path="search" element={<SearchPage />} />
-                            <Route path="nosotros" element={<NosotrosPage />} />
-                            <Route path="/*" element={<Navigate to="homePage#Home" />} />
-                        </>
+                <Route path="login" element={
+                    <PublicRoute>
+                        <LoginPage />
+                    </PublicRoute>
+                } />
 
-
-                }
-
-
+                <Route path="/*" element={
+                    <PrivateRoute>
+                        <CakesRoutes />
+                    </PrivateRoute>
+                } />
             </Routes>
-            <Footer />
         </>
     )
 }

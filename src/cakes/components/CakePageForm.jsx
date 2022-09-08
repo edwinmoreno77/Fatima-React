@@ -7,6 +7,7 @@ const FormFields = {
     relleno: '',
     tamaño: '',
     extra: '',
+    topper: '',
     fecha: '',
 }
 
@@ -133,7 +134,8 @@ export const CakePageForm = ({ uid }) => {
                         <label className="item-cakePage">Topper:</label>
                     </div>
                     <div className="p-1">
-                        <input type="text"
+                        <input
+                            type="text"
                             className="form-control"
                             placeholder='Feliz Cumpleaños Fatima'
                             name="topper"
@@ -146,7 +148,7 @@ export const CakePageForm = ({ uid }) => {
 
                 <div className="col-12 col-md-11 col-lg-9 d-flex justify-content-between">
                     <div className="p-1">
-                        <label className=" from-label item-cakePage">Fecha:</label>
+                        <label className="item-cakePage">Fecha:</label>
                     </div>
                     <div className="p-1">
                         <input
