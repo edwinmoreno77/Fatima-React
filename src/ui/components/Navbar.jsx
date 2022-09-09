@@ -25,7 +25,7 @@ export const Navbar = () => {
                         <img src="/assets/logo.png" alt="" />
                     </a>
                     <div className='navbar-user d-flex justify-content-center align-items-center'>
-                        <h5 className='text-white-50 ms-3 user-name'>{user.name}</h5>
+                        <h5 className='text-white-50 ms-lg-1 user-name'>{user.name}</h5>
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -33,7 +33,7 @@ export const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mb-2 ms-auto mb-lg-0 d-flex justify-content-center align-items-center">
+                        <ul className="navbar-nav mb-2 ms-auto mb-lg-0 d-flex align-items-center">
                             <li className="nav-item">
                                 <Link className='nav-link' to={`/homePage#Home`}><i>Inicio</i></Link>
                             </li>
@@ -70,7 +70,7 @@ export const Navbar = () => {
                                     </li>
                             }
 
-                            <li className='nav-item navbar-user ms-3'>
+                            <li className='nav-item navbar-user ms-lg-3'>
                                 <input
                                     className='d-none'
                                     type="file"
@@ -85,7 +85,7 @@ export const Navbar = () => {
                                     alt="userImg">
                                 </img>
                             </li>
-                            <li className="nav-item ms-4">
+                            <li className="nav-item ms-lg-4">
                                 <Link className='nav-link' to={`/allcakes#subNavBar`}>
                                     <i className="fa-sharp fa-solid fa-cart-shopping navbar-cart"></i>
                                 </Link>
