@@ -32,11 +32,11 @@ export const CakePage = () => {
     return (
         <>
             <div className="bg-productos-pages">
-                <div className="bg-position-pages">
-                    <div id="cakePage" className="text-center pt-5 mt-5 nameCakePage">
+                <div id="cakePage" className="bg-position-pages">
+                    <div className="text-center pt-3 mt-3 nameCakePage">
                         <p>{cake?.name}</p>
                     </div>
-                    <div className="row container-fluid mt-4 justify-content-center">
+                    <div className="row container-fluid p-1 justify-content-center">
                         <div className="col-11">
                             <div className="ps-3">
                                 <button
@@ -46,14 +46,14 @@ export const CakePage = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="col-11 col-md-6 ps-4 my-2  imgCardPage">
+                        <div className="col-11 col-md-6 ps-4 p-4 imgCardPage">
                             <img
                                 src={cake?.img}
                                 alt={cake?.uid}
-                                className=" img-thumbnail animate__animated animate__fadeInLeft"
+                                className="p-lg-5 img-thumbnail animate__animated animate__fadeInLeft"
                             />
                         </div>
-                        <div className="col-11 col-md-5 ">
+                        <div className="col-11 col-md-5 ms-lg-5 p-3">
                             <h3 className="titulo-cakePage">PRECIO DE REFERENCIA: {cake?.price}</h3>
                             <h5 className="titulo-cakePage mt-3">Descripción:</h5>
                             <p className="p-1">{cake?.description}</p>
