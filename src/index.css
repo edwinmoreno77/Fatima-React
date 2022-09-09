@@ -36,29 +36,31 @@ code {
 }
 
 .user-name {
-  background: linear-gradient(90deg, #ffbe7d, #fff);
+  background: linear-gradient(90deg, #ffbe7d, rgb(255, 243, 232));
   font-size: 1.2rem;
-  letter-spacing: -.08em;
+  letter-spacing: -.06em;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .navbar-user img {
   width: 3rem;
-  border-radius: 3rem;
-
 }
 
 .navbar-cart {
   font-size: 1.4rem;
   color: #ffc596;
   padding: 5px;
+  transition: ease-in-out 0.2s;
+
 }
 
 .navbar-cart:hover {
   font-size: 1.4rem;
   color: #ff831e;
   padding: 5px;
+  filter: drop-shadow(0 0 0.8em #cd940faa);
+
 }
 
 @media(min-width: 576px) {

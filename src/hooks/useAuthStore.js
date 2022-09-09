@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
 import { fatimaServerApi } from '../api';
 import { onChecking, onLogin, onLogout, clearErrorMessage } from '../store';
 
@@ -17,7 +18,7 @@ export const useAuthStore = () => {
 
             localStorage.setItem('token', token);
             localStorage.setItem('token-init-date', new Date().getTime());
-            dispatch(onLogin({ name: user.name, uid: user.uid, email: user.email, role: user.role }));
+            dispatch(onLogin({ name: user.name, uid: user.uid, email: user.email, role: user.role, img: user.img }));
 
         } catch (error) {
             dispatch(onLogout('Credenciales incorrectas'));
@@ -35,7 +36,7 @@ export const useAuthStore = () => {
 
             localStorage.setItem('token', token);
             localStorage.setItem('token-init-date', new Date().getTime());
-            dispatch(onLogin({ name: user.name, uid: user.uid, email: user.email, role: user.role }));
+            dispatch(onLogin({ name: user.name, uid: user.uid, email: user.email, role: user.role, img: user.img }));
 
         } catch (error) {
             dispatch(onLogout(error.response.data?.errors[0].msg || 'Error desconocido'));
@@ -55,7 +56,7 @@ export const useAuthStore = () => {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());
-            dispatch(onLogin({ name: data.name, uid: data.uid, role: data.role }));
+            dispatch(onLogin({ name: data.name, uid: data.uid, role: data.role, img: data.img, email: data.email }));
 
         } catch (error) {
             localStorage.clear();
@@ -66,6 +67,26 @@ export const useAuthStore = () => {
     const startLogout = () => {
         localStorage.clear();
         dispatch(onLogout());
+    }
+
+    const updateImgUser = async (file = [], uid) => {
+
+        if (!file) throw new Error('No se ha seleccionado ningun archivo');
+
+        const formData = new FormData();
+        formData.append('file', file[0]);
+
+        try {
+            const resp = await fatimaServerApi.put(`/api/uploads/users/${uid}`, formData);
+
+            if (resp.statusText === 'OK') {
+                Swal.fire('Cargada con Exito', 'success', 'success');
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 
 
@@ -81,6 +102,7 @@ export const useAuthStore = () => {
         startLogin,
         startLogout,
         startRegister,
+        updateImgUser,
     }
 
 }

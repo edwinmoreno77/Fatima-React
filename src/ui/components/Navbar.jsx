@@ -1,10 +1,18 @@
+import { useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useAuthStore } from '../../hooks/useAuthStore';
 
 
 export const Navbar = () => {
 
-    const { startLogout, user, status } = useAuthStore();
+    const { startLogout, user, status, updateImgUser } = useAuthStore();
+
+    const fileInputRef = useRef();
+
+    const onFileInputChange = ({ target }) => {
+        if (target.files === 0) return;
+        updateImgUser(target.files, user.uid);
+    }
 
     return (
         <div id='Home'>
@@ -25,7 +33,7 @@ export const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mb-2 ms-auto mb-lg-0">
+                        <ul className="navbar-nav mb-2 ms-auto mb-lg-0 d-flex justify-content-center align-items-center">
                             <li className="nav-item">
                                 <Link className='nav-link' to={`/homePage#Home`}><i>Inicio</i></Link>
                             </li>
@@ -63,7 +71,19 @@ export const Navbar = () => {
                             }
 
                             <li className='nav-item navbar-user ms-3'>
-                                <img src="assets/no-image.jpg" alt="" />
+                                <input
+                                    className='d-none'
+                                    type="file"
+                                    ref={fileInputRef}
+                                    onChange={onFileInputChange}
+                                />
+                                <img
+                                    type='button'
+                                    className='p-1 rounded-circle'
+                                    src={(user.img) ? user.img : "assets/no-image.jpg"}
+                                    onClick={() => fileInputRef.current.click()}
+                                    alt="userImg">
+                                </img>
                             </li>
                             <li className="nav-item ms-4">
                                 <Link className='nav-link' to={`/allcakes#subNavBar`}>
