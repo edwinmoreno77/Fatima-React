@@ -85,6 +85,14 @@ export const useAuthStore = () => {
 
         } catch (error) {
             console.log(error);
+            if (error.data === undefined) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Error al cargar la imagen',
+                    footer: 'Algo salio mal'
+                })
+            }
         }
 
     }
