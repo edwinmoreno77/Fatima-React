@@ -139,7 +139,7 @@ export const LoginPage = () => {
                 <footer id="Contactos" className=" d-flex justify-content-center bg-position-pages">
                     <div className="container">
                         <div className="container my-5 display-6 fs-2 text-center">
-                            <h4 className="my-2"><i>Bienvenido! inicia sesión con tu cuenta o puedes registrarte y tener acceso de forma rápida y sencilla de tus Cakes favoritas.</i></h4>
+                            <h4 className="my-2"><i>Bienvenido! inicia sesión con tu cuenta o puedes registrarte y tener acceso de forma rápida y sencilla a tus Cakes favoritas.</i></h4>
                         </div>
                         <div className="text-center d-flex justify-content-center img-footer icon">
                             <a href="https://www.instagram.com/fatima.afta/?hl=es"><img src="/assets/logo.png"
